@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/popper.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,9 +96,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/popper.js"
+            ]
           }
         },
         "lint": {
@@ -124,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "rent-room-web"
+  "defaultProject": "rent-room-web",
+  "cli": {
+    "analytics": false
+  }
 }

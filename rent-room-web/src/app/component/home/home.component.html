@@ -1,0 +1,54 @@
+<div class="header content">
+    <div class="row mr-1">
+        <div class="col-md-12 text-right">
+            <b>Welcome !</b> Username
+        </div>
+    </div>
+    <div class="row mr-1">
+        <div class="col-md-12 mt-1 text-right">
+            <span (click)="logout()" class="logout-link">Logout</span>
+        </div>
+    </div>
+</div>
+<div class="menu content">
+    <div class="row">
+        <div class="col-md-12 text-center mb-4">
+            <img class="logo" src="../../../assets/logo.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="menuLink(types.dashboard)" class="menu-item p-3" [ngClass]="{ 'active': active === types.dashboard }">
+            Dashboard
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="menuLink(types.rooms)" class="menu-item p-3" [ngClass]="{ 'active': active === types.rooms }">
+            Rooms
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="menuLink(types.meter)" class="menu-item p-3" [ngClass]="{ 'active': active === types.meter }">
+            Meter
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="menuLink(types.billing)" class="menu-item p-3" [ngClass]="{ 'active': active === types.billing }">
+            Billing
+        </div>
+    </div>
+    <div class="row">
+        <div (click)="menuLink(types.customer)" class="menu-item p-3" [ngClass]="{ 'active': active === types.customer }">
+            Customer
+        </div>
+    </div>
+    <div class="row end-menu">
+        <div (click)="menuLink(types.financial)" class="menu-item p-3" [ngClass]="{ 'active': active === types.financial }">
+            Financial
+        </div>
+    </div>
+</div>
+<div class="page content">
+    <div class="page-content">
+        <app-dashboard *ngIf="active === types.dashboard"></app-dashboard>
+    </div>
+</div>

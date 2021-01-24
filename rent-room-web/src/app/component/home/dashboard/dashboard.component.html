@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="title"><span class="font-weight-bold" style="color: #4ab7ff;">D</span>ashboard</h4>
+    </div>
+</div>
+<!-- Search Box -->
+<div class="content ml-3 mr-3 search-title row"><div class="col-md-12">Search</div></div>
+<div class="content ml-3 mr-3 p-4 search-content font-medium">
+    <div class="row">
+        <div class="col-md-2 mt-1 text-right"><label>Branch : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+        <div class="col-md-1 p-0 mt-1 text-right"><label>Section : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-2 mt-1 text-right"><label>Date From : </label></div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Enter Date From" />
+        </div>
+        <div class="col-md-1 p-0 mt-1 text-right"><label>Date To : </label></div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Enter Date To" />
+        </div>
+    </div>
+</div>
+<div class="ml-3 mr-3 mt-4 row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+        <button (click)="clearBtn()" class="btn btn-default" style="border: 1px solid #cccccc; width: 100%;">Clear</button>
+    </div>
+    <div class="col-md-2">
+        <button (click)="searchBtn()" class="btn-submit">Search</button>
+    </div>
+</div>
+<div *ngIf="is_search" class="ml-3 mr-3 mt-4 row">
+    <img src="../../../../assets/logo.png" /><Br>
+    <img src="../../../../assets/logo.png" /><br>
+    <img src="../../../../assets/logo.png" /><br>
+</div>
