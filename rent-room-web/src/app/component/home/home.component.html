@@ -50,5 +50,10 @@
 <div class="page content">
     <div class="page-content">
         <app-dashboard *ngIf="active === types.dashboard"></app-dashboard>
+        <app-rooms *ngIf="active === types.rooms"></app-rooms>
+        <app-meter *ngIf="active === types.meter"></app-meter>
+        <app-billing *ngIf="active === types.billing"></app-billing>
+        <app-customer *ngIf="active === types.customer"></app-customer>
+        <app-financial *ngIf="active === types.financial"></app-financial>
     </div>
-</div>
+</div>x

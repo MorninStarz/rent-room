@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="title"><span class="font-weight-bold" style="color: #4ab7ff;">F</span>inancial</h4>
+    </div>
+</div>
+<!-- Search Box -->
+<div class="content ml-3 mr-3 search-title row"><div class="col-md-12">Search</div></div>
+<div class="content ml-3 mr-3 p-4 search-content font-medium">
+    <div class="row">
+        <div class="col-md-2 mt-1 text-right"><label>Bank Name : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+        <div class="col-md-1 p-0 mt-1 text-right"><label>Bank Branch : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-2 mt-1 text-right"><label>Bank No. : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+        <div class="col-md-1 p-0 mt-1 text-right"><label>Account No. : </label></div>
+        <div class="col-md-4">
+            <select class="form-control">
+                <option [(ngModel)]="form.branch" *ngFor="let branch of branches" value="branch.id">{{ branch.name }}</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="ml-3 mr-3 mt-4 row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+        <button (click)="clearBtn()" class="btn btn-default" style="border: 1px solid #cccccc; width: 100%;">Clear</button>
+    </div>
+    <div class="col-md-2">
+        <button (click)="searchBtn()" class="btn-submit">Search</button>
+    </div>
+</div>
+<ng-container *ngIf="is_search">
+    <div class="row pr-4">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <button class="btn-submit">+ Financial</button>
+        </div>
+    </div>
+    <div class="ml-3 mr-3 mt-4 row">
+        <table class="table">
+            <tr><th *ngFor="let field of fields">{{ field }}</th><th>Action</th></tr>
+            <tr *ngFor="let item of items">
+                <td>{{ item.no }}</td>
+                <td>{{ item.bank_name }}</td>
+                <td>{{ item.bank_branch }}</td>
+                <td>{{ item.account_name }}</td>
+                <td>{{ item.account_no }}</td>
+                <td>{{ item.balance }}</td>
+                <td>{{ item.status }}</td>
+                <td>
+                    <img style="cursor: pointer;" src="../../../../assets/edit.png" />
+                    <img style="cursor: pointer;" src="../../../../assets/delete.png" />
+                </td>
+            </tr>
+        </table>
+    </div>    
+</ng-container>
